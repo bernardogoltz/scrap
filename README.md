@@ -1,6 +1,7 @@
 # web scraping com scrapy
 
 ## First Scrapy Spider
+    $git clone https://github.com/bernardogoltz/scrap
 
 ### Inicializando env
 ```
