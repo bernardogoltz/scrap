@@ -1,5 +1,6 @@
 # web scraping com scrapy
 
+## First Scrapy Spider
 
 ### Inicializando env
 ```
@@ -11,7 +12,13 @@ conda activate webscraping
 #
 ### Inicializando Projeto
 ```bash
-scrapy startproject nome_da_pasta
+scrapy startproject [nome_da_pasta]
+```
+```bash
+scrapy shell [url]
+```
+```bash
+fetch [url]
 ```
 #
 ### Na pasta spiders

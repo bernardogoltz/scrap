@@ -15,4 +15,17 @@ class BookspiderSpider(scrapy.Spider):
                 'url':book.css('h3 a').attrib['href']
             }
             
+        # extrai o sufixo da próxima pagina       
+        next_page = response.css('li.next a ::attr(href)').get()
+        
+        if next_page is not None:
             
+            if 'catalogue/' in next_page:
+            # se o sufixo for não nulo, então, concatena com o url
+                next_page_url = 'https://books.toscrape.com/' + next_page
+                
+            else: 
+                next_page_url = 'https://books.toscrape.com/catalogue/' + next_page
+            
+            # rodar a função para a próxima página, até não haverem mais páginas
+            yield response.follow(next_page_url , callback = self.parse)
