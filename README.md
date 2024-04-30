@@ -13,7 +13,7 @@ conda activate webscraping
 scrapy startproject nome_da_pasta
 ```
 
-### Na pasta spyders
+### Na pasta spiders
 ``` bash
 # scrapy genspider [nome] [url]
 scrapy genspider bookspider books.toscrape.com
